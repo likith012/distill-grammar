@@ -5,3 +5,4 @@ src/.ipynb_checkpoints/
 saves/pytorch_model.bin
 src/wandb/
 configs/__pycache__/
+test.ipynb
