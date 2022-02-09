@@ -1,12 +1,30 @@
-import sys
-import os
+"""Dataloader for the dataset.
+"""
+
+__author__ = "Likith Reddy"
+__version__ = "1.0.0"
+__email__ = "likith012@gmail.com"
+
 import torch
 
 class BERTDataset(torch.utils.data.Dataset):
+    """DataLoader for the dataset.
 
-    def __init__(self, sentence, target, config):
+    Attributes:
+    ----------
+    sentence : list[str]
+        Input sentences.
+    target : list[int]
+        Target labels.
+    tokenizer : transformers.BertTokenizer
+        Tokenizer for the BERT model.
+    max_len : int
+        Maximum length of the input sentence.
+
+    """
+
+    def __init__(self, sentence: list[str], target: list[str], config):
         super(BERTDataset, self).__init__()
-
         self.sentence= sentence
         self.target = target
         self.tokenizer = config.TOKENIZER
@@ -16,9 +34,7 @@ class BERTDataset(torch.utils.data.Dataset):
         return len(self.sentence)
 
     def __getitem__(self, idx):
-
         sentence = str(self.sentence[idx])
-
         inputs = self.tokenizer.encode_plus( 
             sentence,
             add_special_tokens = True,

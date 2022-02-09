@@ -1,3 +1,11 @@
+"""Convert the model to ONN format
+"""
+
+__author__ = "Likith Reddy"
+__version__ = "1.0.0"
+__email__ = "likith012@gmail.com"
+
+
 import torch
 import torch.nn as nn
 import torch.onnx
