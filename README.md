@@ -2,6 +2,13 @@
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 # distill-grammar
+#### An English language grammar classification model trained on Bert.
+
+## Table of contents
+- [Introduction](https://github.com/likith012/distill-grammar/edit/main/README.md#introduction-)
+- [Results](https://github.com/likith012/distill-grammar/edit/main/README.md#results-man_dancing)
+- [Getting started](https://github.com/likith012/distill-grammar/edit/main/README.md#getting-started-)
+
 
 ## Introduction 🔥
 
@@ -15,6 +22,7 @@ text data. Here we explore the possibility of few shot learning by using the pre
 |          | MCC Score | Accuracy | 
 | -------- | ------------- | ------------- |
 | **Results**| 0.5699 | 0.8299 | 
+
 ## Getting started 🥷
 #### Setting up the environment
 - All the development work is done using `Python 3.7`
