@@ -14,6 +14,22 @@ text data. Here we explore the possibility of few shot learning by using the pre
 
 |          | MCC Score | Accuracy | 
 | -------- | ------------- | ------------- |
-| Train | 0.9951 | 0.998 | 
-| Test| 0.5699 | 0.8299 | 
+| **Results**| 0.5699 | 0.8299 | 
+## Getting started 🥷
+#### Setting up the environment
+- All the development work is done using `Python 3.7`
+- Install all the necessary dependencies using `requirements.txt` file. Run `pip install -r requirements.txt` in terminal
+- Alternatively, set up the environment and train the model using the `Dockerfile`. Run `docker build -f Dockerfile -t <image_name> .`
 
+#### What each file does
+
+- `configs/config.py` : This file contains all the configurations for the model.
+- `src/dataset.py` : This file contains the utility functions for loading the dataset.
+- `src/engine.py` : This file contains the utilities for training and evaluation.
+- `src/train.py` : This file is used to train the model.
+- `deploy/flask_app.py` : This file is used to deploy the model.
+- `deploy/convert_onnx.py` : This file is used to convert the model to onnx format.
+- `saves` : This directory contains bert tokenizer configuration, special tokens etc.
+
+#### Training the model
+- Run `python src/train.py` in terminal.
